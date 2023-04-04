@@ -2,6 +2,22 @@ html,body {
     font-size: 16px;
 }
 
+
+@font-face {
+    font-family: 'roboto_slablight';
+    src: url('robotoslab-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('robotoslab-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root{
     --carousel-height: 18.75rem;
 /*    300px ma byc 300pix/16pix = 18.75rem  */
@@ -80,14 +96,17 @@ html,body {
     animation-name: slide-3;
     background-image: url('../images/bg3.jpg');
     position: absolute;
-    
+
 }
 
 .slide .slide__hdl {
-    /*margin-top: ;*/
+    margin-top: 0;
+    font-family: 'Roboto Slab Regular', sans-serif;
 }
 
-.slide .slide__text{}
+.slide .slide__text{
+    font-family: 'Roboto Slab Light', sans-serif;
+}
 .slide .slide__link{}
 .nav{}
 .nav .nav__btn{}
