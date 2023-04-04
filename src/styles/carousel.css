@@ -1,12 +1,91 @@
-.carousel{}
+html,body {
+    font-size: 16px;
+}
 
-.carousel .carousel__slides{}
+:root{
+    --carousel-height: 18.75rem;
+/*    300px ma byc 300pix/16pix = 18.75rem  */
+}
+
+@keyframes slide-1 {
+    0% {left: 0}
+    20% {left: 0}
+    40% {left: -100%}
+    60% {left: -100%}
+    80% {left: -200%}
+    100% {left: -200%}
+}
+@keyframes slide-2 {
+    0% {left: 100%}
+    20% {left: 100%}
+    40% {left: 0%}
+    60% {left: 0%}
+    80% {left: -100%}
+    100% {left: -100%}
+}
+@keyframes slide-3 {
+    0% {left: 200%}
+    20% {left: 200%}
+    40% {left: 100%}
+    60% {left: 100%}
+    80% {left: 0%}
+    100% {left: 0%}
+}
+
+.carousel{
+    .background-color: #litghtblue;
+}
+
+.carousel .carousel__slides{
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
 
 .carousel .carousel__slide{}
 .carousel .carousel__nav{}
-.slide {}
+.slide {
+    position: absolute;
+    width: 100%;
+    min-height: var(--carousel-height);
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide:first-child{
+    background-color: lightgreen;
+    left: 0px;
+    animation-name: slide-1;
+    background-image: url('../images/bg1.jpg');
+}
+.slide:nth-child(2){
+    background-color: blue;
+    left: 100%;
+    animation-name: slide-2;
+    background-image: url('../images/bg2.jpg');
+}
+.slide:last-child{
+    background-color: red;
+    left: 200%;
+    animation-name: slide-3;
+    background-image: url('../images/bg3.jpg');
+}
 
-.slide .slide__hdl {}
+.slide .slide__box{
+    background-color: rgba(0,0,0,.7)
+    left: 200%;
+    animation-name: slide-3;
+    background-image: url('../images/bg3.jpg');
+    position: absolute;
+    
+}
+
+.slide .slide__hdl {
+    /*margin-top: ;*/
+}
 
 .slide .slide__text{}
 .slide .slide__link{}
