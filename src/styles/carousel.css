@@ -49,6 +49,7 @@ html,body {
 }
 
 .carousel{
+    position: relative;
     .background-color: #litghtblue;
 }
 
@@ -96,6 +97,7 @@ html,body {
     animation-name: slide-3;
     background-image: url('../images/bg3.jpg');
     position: absolute;
+    padding: 7.8125rem 7.8125rem 7.8125rem 7.8125rem ;
 
 }
 
@@ -107,10 +109,48 @@ html,body {
 .slide .slide__text{
     font-family: 'Roboto Slab Light', sans-serif;
 }
-.slide .slide__link{}
-.nav{}
-.nav .nav__btn{}
-.nav .nav__btn.nav__btn--next {}
+.slide .slide__link{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab Regular', sans-serif;
+    position: absolute;
+    right: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 400ms;
+}
+
+.slide .slide__link:hover{
+    color: gold;
+}
+.nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.nav .nav__btn{
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+}
+.nav .nav__btn.nav__btn--next {
+    position: absolute;
+    right: 1rem;
+    transform: rotate(0deg);
+}
 /*.nav__btn.nav__btn--next oznacza ze selektor musi posiadac 2 klasy
 dzieki temu sila tego selektora jest wieksza od .nav__btn
 samodzielnie */
