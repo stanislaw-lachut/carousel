@@ -4,16 +4,16 @@ html,body {
 
 
 @font-face {
-    font-family: 'roboto_slablight';
-    src: url('robotoslab-light-webfont.woff2') format('woff2');
+    font-family: 'Roboto Slab Light';
+    src: url('../fonts/robotoslab-light-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'roboto_slabregular';
-    src: url('robotoslab-regular-webfont.woff2') format('woff2');
+    font-family: 'Roboto Slab Regular';
+    src: url('../fonts/robotoslab-regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 
@@ -56,7 +56,10 @@ html,body {
 .carousel .carousel__slides{
     position: relative;
     overflow: hidden;
-    min-height: 300px;
+    min-height: var(--carousel-height);
+}
+
+.carousel .carousel__slide {
 }
 
 .carousel .carousel__slide{}
@@ -76,26 +79,26 @@ html,body {
     background-color: lightgreen;
     left: 0px;
     animation-name: slide-1;
-    background-image: url('../images/bg1.jpg');
+    background-image: url('../images/slide_bg1.jpg');
 }
 .slide:nth-child(2){
     background-color: blue;
     left: 100%;
     animation-name: slide-2;
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../images/slide_bg2.jpg');
 }
 .slide:last-child{
     background-color: red;
     left: 200%;
     animation-name: slide-3;
-    background-image: url('../images/bg3.jpg');
+    background-image: url('../images/slide_bg3.jpg');
 }
 
 .slide .slide__box{
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(0,0,0,.7);
     left: 200%;
     animation-name: slide-3;
-    background-image: url('../images/bg3.jpg');
+    background-image: url('../images/slide_bg3.jpg');
     position: absolute;
     padding: 7.8125rem 7.8125rem 7.8125rem 7.8125rem ;
 
